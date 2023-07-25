@@ -42,7 +42,7 @@ export default function HomePage() {
   };
 
   
-  const contractAddress = "0x0165878A594ca255338adfa4d48449f69242Eb8F";
+  const contractAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
 
   const atmABI = atm_abi.abi;
 
@@ -113,38 +113,6 @@ export default function HomePage() {
     }
   }
 
-  const addition = async () => {
-      if (atm) {
-        const a = parseInt(inputA);
-        const b = parseInt(inputB);
-        const answer = await atm.addition(a,b);
-        setAdd(answer);
-      }
-  }  
-  const subtraction = async () => {
-    if (atm) {
-      const a = parseInt(inputA);
-      const b = parseInt(inputB);
-      const answer = await atm.substraction(a,b);
-      setSub(answer);
-    }
-  }
-  const multiplication = async () => {
-    if (atm) {
-      const a = parseInt(inputA);
-      const b = parseInt(inputB);
-      const answer = await atm.multiplication(a,b);
-      setMult(answer);
-    }
-  }
-  const handleInputAChange = (event) => {
-    setInputA(event.target.value);
-  };
-
-  const handleInputBChange = (event) => {
-    setInputB(event.target.value);
-  };
-
   
   const initUser = () => {
     // Check to see if user has Metamask
@@ -174,6 +142,7 @@ export default function HomePage() {
             Withdraw 1 ETH
           </button>
         </div>
+
         {/* Buttons to increment and decrement the Token */}
       <div>
         <h1>Here is your ERC20 Token ATM🪙</h1>
@@ -185,7 +154,6 @@ export default function HomePage() {
           Burn Token
         </button>
       </div>
-        
       </>
     );
     
